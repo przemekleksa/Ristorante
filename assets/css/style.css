@@ -1,0 +1,425 @@
+@font-face{
+    font-family: KauschanScript;
+    src: url(../fonts/kaushan-script/KaushanScript-Regular.otf)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.arrow {
+    display: none;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #b8860a;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 0 1px 1px #000;
+    transition: 0.3s all;
+    opacity: 0;
+
+}
+
+body.move .arrow{
+    display: block;
+    opacity: 1;
+}
+.arrow:hover{
+    font-size:30px;
+    background:#f5b209;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo img{
+    display: block;
+    height: 60px;
+    width: auto;
+    transition: 0.5s;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    transition: .3s all;
+    padding: 20px 0;
+}
+
+nav.blue {
+    background-color: rgb(16, 16, 71);
+    padding: 10px 0;
+}
+
+nav.blue .container .logo img{
+    height: 40px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 30px 0 0;
+
+}
+nav ul li:last-child {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: .6;
+    transition: 0.5s all;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+}
+
+#video{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 50px 0;
+}
+
+#video video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+#menu h2{
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+}
+
+#menu .container .columns{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu .container .columns .column{
+    width: 40%;
+}
+
+@media(max-width: 1000px){
+    #menu .container .columns{
+        flex-direction: column;
+    }
+
+    #menu .container .columns .column{
+        width: 100%;
+    }
+}
+
+#menu .container .columns .column h3{
+font-size: 40px;
+font-family: KauschanScript;
+font-weight: 700;
+margin: 0 0 30px 0;
+display: block;
+}
+
+#menu .container .columns .column .dish{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+#menu .container .columns .column .dish .photo img{
+    width: 70px;
+    height: auto;
+    border-radius: 100%;
+}
+#menu .container .columns .column .dish .dishName{
+    display: flex;
+    flex-direction: column;
+}
+#menu .container .columns .column .dish .dishName .name{
+    font-size: 30px;
+    font-family: KauschanScript;
+    font-weight: 700;
+}
+#menu .container .columns .column .dish .dishName .description{
+    font-size: 15px;
+    font-weight: 300;
+}
+#menu .container .columns .column .dish .price{
+    font-family: KauschanScript;
+    font-size: 25px;
+    text-align: center;
+    color: #b8860a;
+    font-weight: 700;
+}
+
+#instagram h1{
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+}
+
+#instagram #instagram-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#instagram #instagram-content .item{
+    width: 10%;
+    overflow: hidden;
+}
+
+@media(max-width: 1270px){
+    #instagram #instagram-content .item{
+        width: 20%;
+    }
+}
+
+@media(max-width: 860px){
+    #instagram #instagram-content .item{
+        width: 25%;
+    }
+}
+
+
+@media(max-width: 440px){
+    #instagram #instagram-content .item{
+        width: 50%;
+    }
+}
+
+
+
+#instagram #instagram-content .item img{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: .3s all;
+}
+
+#instagram #instagram-content .item img:hover{
+    transform: scale(1.2);
+}
+
+
+.map h1{
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 40px 0;
+}
+
+#googlemapa{
+    height: 400px;
+    width: 100%;
+}
+
+#info 
+{
+    background: #b4adad71;
+    padding: 40px 0;
+    margin: 0 0 40px 0;
+}
+
+#info h1 {
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+}
+
+#info .container .icons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@media(max-width: 600px){
+    #info .container .icons{
+        flex-direction: column;
+    }
+    
+    #info .container .icon{
+       display: flex;
+       flex-direction: column;
+    }
+
+    #info .container .icons .icon:nth-child(2) {
+        order: 0;
+    }
+    
+    #info .container .icons .icon:nth-child(1) {
+        order: 1;
+    }
+
+    #info .container .icons .icon:nth-child(3) {
+        order: 2;
+    }
+}
+
+#info .container .icons .icon .sign {
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 20px 0;
+}
+
+#info .container .icons .icon .name {
+    font-family: KauschanScript;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 20px 0;
+}
+
+#info .container .icons .icon .description {
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 20px 0;
+}
+
+#contactAndMap{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 800px){
+    #contactAndMap{
+flex-direction: column;
+    }
+    #contactAndMap .contact{
+        width: 100% !important;
+    }
+    #contactAndMap .map{
+        width: 100% !important;
+    }
+}
+#contactAndMap .contact{
+    width: 50%;
+}
+
+#contactAndMap .contact h1{
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+}
+
+#contactAndMap .map{
+    width: 50%;
+}
+#contactForm{
+    padding: 30px;
+}
+#contactForm .columns{
+display: flex;
+justify-content: space-between;
+}
+
+#contactForm .columns .column{
+    width: 45%;
+}
+
+#contactForm label{
+    display: block;
+    font-size: 16px;
+    margin: 0 0 7px 0;
+}
+
+#contactForm .columns, #contactForm .row{
+    margin: 0 0 10px 0;
+
+}
+
+#contactForm input[type="text"], #contactForm input[type="email"]{
+width: 100%;
+padding: 10px;
+border-radius: 4px;
+border: 1px solid #b8860a;
+background: #ffffff; 
+}
+
+#contactForm textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #b8860a;
+    background: #ffffff;    
+}
+
+#contactForm select{
+    width: 100%;
+padding: 10px;
+border-radius: 4px;
+border: 1px solid #b8860a;
+background: #ffffff; 
+}
+
+#contactForm button{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    color: #ffffff
+}
+
+#contactForm button[type="reset"]{
+    background: #b8860a;
+}
+
+#contactForm button[type="submit"]{
+    background-color: rgb(16, 16, 71);
+}
